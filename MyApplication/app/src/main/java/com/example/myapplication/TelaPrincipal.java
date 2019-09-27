@@ -23,8 +23,7 @@ public class TelaPrincipal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_principal);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         btTom.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +31,20 @@ public class TelaPrincipal extends AppCompatActivity {
                 Intent tom = new Intent(TelaPrincipal.this, TomadasCal.class);
                 startActivity(tom);
 
+            }
+        });
+
+        btLum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent lum = new Intent(TelaPrincipal.this, LuminariaCal.class);
+            }
+        });
+
+        btConfig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent config = new Intent(TelaPrincipal.this, Config.class);
             }
         });
 

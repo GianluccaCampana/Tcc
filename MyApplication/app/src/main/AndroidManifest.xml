@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Config"
+            android:label="@string/title_activity_config"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".LuminariaCal"
+            android:label="@string/title_activity_luminaria_cal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".TomadasCal"
             android:label="@string/title_activity_tomadas_cal"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TelaPrincipal"
             android:label="@string/title_activity_tela_principal"
