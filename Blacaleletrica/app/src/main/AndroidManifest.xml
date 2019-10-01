@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Configuracao"></activity>
+        <activity android:name=".Nbr"></activity>
+        <activity android:name=".Configuracao" />
         <activity android:name=".Luminaria" />
         <activity android:name=".Tomadas" />
         <activity android:name=".TelaPrincipal" />
