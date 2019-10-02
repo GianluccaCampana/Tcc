@@ -8,7 +8,7 @@
     tools:context=".Tomadas">
 
     <EditText
-        android:id="@+id/editTextComprimento"
+        android:id="@+id/editTextComprimentoTom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/opcoes" />
 
     <EditText
-        android:id="@+id/editTextResul"
+        android:id="@+id/editTextResulTom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -48,7 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLargura" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLarguraTom" />
 
     <RadioGroup
         android:id="@+id/opcoes"
@@ -79,7 +79,7 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/editTextLargura"
+        android:id="@+id/editTextLarguraTom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -88,6 +88,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextComprimento" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextComprimentoTom" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

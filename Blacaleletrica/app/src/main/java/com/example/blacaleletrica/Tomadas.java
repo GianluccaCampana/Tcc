@@ -20,9 +20,9 @@ public class Tomadas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tomadas);
 
-        comp =(EditText)findViewById(R.id.editTextComprimento);
-        lar = (EditText)findViewById(R.id.editTextLargura);
-        resul=(EditText)findViewById(R.id.editTextResul);
+        comp =(EditText)findViewById(R.id.editTextComprimentoTom);
+        lar = (EditText)findViewById(R.id.editTextLarguraTom);
+        resul=(EditText)findViewById(R.id.editTextResulTom);
         cal=(Button)findViewById(R.id.buttonResulTom);
         grupo=(RadioGroup)findViewById(R.id.opcoes);
 
