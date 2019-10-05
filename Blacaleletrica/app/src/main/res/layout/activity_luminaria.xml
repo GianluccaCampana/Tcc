@@ -6,45 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".Luminaria">
 
-    <EditText
-        android:id="@+id/editTextLarguraTom"
+    <Button
+        android:id="@+id/buttonCalcularLum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Largura"
-        android:inputType="numberDecimal"
+        android:layout_marginBottom="88dp"
+        android:text="Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/editTextResulLum"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Ambientes" />
 
     <EditText
         android:id="@+id/editTextComprimentoLum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="Comprimento"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLarguraTom" />
 
-    <Button
-        android:id="@+id/buttonCalcularLum"
+    <EditText
+        android:id="@+id/editTextLarguraTom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calcular"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="94dp"
+        android:ems="10"
+        android:hint="Largura"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextComprimentoLum" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextResulLum"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
         android:ems="10"
         android:hint="Resultado"
         android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/Ambientes"
+        android:layout_width="385dp"
+        android:layout_height="218dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextComprimentoLum">
+
+        <RadioButton
+            android:id="@+id/radioButtonSala"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sala" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCozinha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cozinha" />
+
+        <RadioButton
+            android:id="@+id/radioButtonQuarto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quarto" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBanheiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Banheiro" />
+
+        <RadioButton
+            android:id="@+id/radioButtonGeral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hall / Escada / Garagem" />
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
