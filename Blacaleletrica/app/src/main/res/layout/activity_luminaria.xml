@@ -31,17 +31,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/editTextLargLum" />
 
             <EditText
-                android:id="@+id/editTextResulLum"
+
+                android:id="@+id/editTextLargLum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Resultado"
+                android:hint="Largura"
                 android:inputType="numberDecimal"
-                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <RadioGroup
                 android:id="@+id/Ambientes"
@@ -94,17 +93,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/Ambientes" />
 
             <EditText
-
                 android:focusable="false"
-                android:id="@+id/editTextLargLum"
+                android:id="@+id/editTextResulLum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Largura"
+                android:hint="Resultado"
                 android:inputType="numberDecimal"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum" />
 
 
         </LinearLayout>

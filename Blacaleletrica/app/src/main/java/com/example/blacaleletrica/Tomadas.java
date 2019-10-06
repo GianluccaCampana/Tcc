@@ -1,11 +1,9 @@
 package com.example.blacaleletrica;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.service.autofill.FieldClassification;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +13,7 @@ import android.widget.Toast;
 public class Tomadas extends AppCompatActivity {
 
     // Delclaração de viriáveis
-    EditText comp, lar, resul;
+    EditText compTom, larTom, resul;
     Button cal;
     RadioGroup grupo;
 
@@ -25,11 +23,12 @@ public class Tomadas extends AppCompatActivity {
         setContentView(R.layout.activity_tomadas);
 
         // Conectando elas com XML
-        comp =(EditText)findViewById(R.id.editTextComprimentoTom);
-        lar = (EditText)findViewById(R.id.editTextLarguraTom);
+        compTom =(EditText)findViewById(R.id.editTextComprimentoTom);
+        larTom = (EditText)findViewById(R.id.editTextLarguraTom);
         resul=(EditText)findViewById(R.id.editTextResulTom);
         cal=(Button)findViewById(R.id.buttonResulTom);
         grupo=(RadioGroup)findViewById(R.id.opcoes);
+
 
 
         cal.setOnClickListener(new View.OnClickListener() {
@@ -46,50 +45,73 @@ public class Tomadas extends AppCompatActivity {
 
 
                 // Verificando a id dos radios, para ai sim efetuar os cálculos
-                 if(numb1 == 0 || numb2 ==0){
+                if(op == R.id.radioButton1) {
+                    if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
 
-                    // Caso falte algum valor em largura ou comprimento irá aparecer mensagem de alerta
-                    Context alerta = getApplicationContext();
-                    Toast toast = Toast.makeText(alerta,"Necessario que largura ou compromento esteja preechido", Toast.LENGTH_SHORT);
-                    toast.show();
-                }else if(op == R.id.radioButton1) {
+                        // caso não seja preenchido largura ou comprimento aparecerá uma mensagem de alerta com toast
+                        Context alerta = getApplicationContext();
+                        Toast toast = Toast.makeText(alerta, "Necessário preenchimento da largura e comprimento", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }else {
 
-                    //convertendo valores digitados em double
-                    numb1 = Double.parseDouble(comp.getText().toString());
-                    numb2 = Double.parseDouble(lar.getText().toString());
+                        //convertendo valores digitados em double
+                        numb1 = Double.parseDouble(compTom.getText().toString());
+                        numb2 = Double.parseDouble(larTom.getText().toString());
 
-                    double total = ((numb1 * 2) + (numb2 * 2)) / 3.5;
+                        double total = ((numb1 * 2) + (numb2 * 2)) / 3.5;
 
-                    // mostrar o resultado o resultado no editText resultado
-                    // Math.round arredonda o resulta pra cima
-                    resul.setText(String.valueOf(Math.round(total)));
+                        // mostrar o resultado o resultado no editText resultado
+                        // Math.round arredonda o resulta pra cima
+                        resul.setText(String.valueOf(Math.round(total)));
+                    }
                 }else if(op == R.id.radioButton2){
-                    //convertendo valores digitados em double
-                    numb1 = Double.parseDouble(comp.getText().toString());
-                    numb2 = Double.parseDouble(lar.getText().toString());
+                    if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
 
+                        // caso não seja preenchido largura ou comprimento aparecerá uma mensagem de alerta com toast
+                        Context alerta = getApplicationContext();
+                        Toast toast = Toast.makeText(alerta, "Necessário preenchimento da largura e comprimento", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }else {
 
-                    double total = ((numb1 * 2) + (numb2 * 2)) / 5;
+                        //convertendo valores digitados em double
+                        numb1 = Double.parseDouble(compTom.getText().toString());
+                        numb2 = Double.parseDouble(larTom.getText().toString());
 
-                    // mostrar o resultado o resultado no editText resultado
-                    // Math.round arredonda o resulta pra cima
-                    resul.setText(String.valueOf(Math.round(total)));
+                        double total = ((numb1 * 2) + (numb2 * 2)) / 5;
+
+                        // mostrar o resultado o resultado no editText resultado
+                        // Math.round arredonda o resulta pra cima
+                        resul.setText(String.valueOf(Math.round(total)));
+                    }
                 }else if(op == R.id.radioButton3){
-                    //convertendo valores digitados em double
-                    numb1 = Double.parseDouble(comp.getText().toString());
-                    numb2 = Double.parseDouble(lar.getText().toString());
+                    if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
+
+                        // caso não seja preenchido largura ou comprimento aparecerá uma mensagem de alerta com toast
+                        Context alerta = getApplicationContext();
+                        Toast toast = Toast.makeText(alerta, "Necessário preenchimento da largura e comprimento", Toast.LENGTH_SHORT);
+                        toast.show();
+                    }else {
 
 
-                    double total =1;
+                        double total = 1;
 
-                    // mostrar o resultado o resultado no editText resultado
-                    // Math.round arredonda o resulta pra cima
-                    resul.setText(String.valueOf(Math.round(total)));
-                }else{
+                        // mostrar o resultado o resultado no editText resultado
+                        // Math.round arredonda o resulta pra cima
+                        resul.setText(String.valueOf(Math.round(total)));
+                    }
+                }else if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
+
+                    // caso não seja preenchido largura ou comprimento aparecerá uma mensagem de alerta com toast
+                    Context alerta = getApplicationContext();
+                    Toast toast = Toast.makeText(alerta, "Necessário preenchimento da largura e comprimento", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+
+                else{
 
                     // caso nenhum cômodo seja selecionado aparecerá uma mensagem de alerta com toast
                     Context alerta = getApplicationContext();
-                    Toast toast = Toast.makeText(alerta, "Nunhum Cômodo selecionado", Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(alerta, "Nunhum Cômodo selecionado", Toast.LENGTH_SHORT);
                     toast.show();
                 }
 
