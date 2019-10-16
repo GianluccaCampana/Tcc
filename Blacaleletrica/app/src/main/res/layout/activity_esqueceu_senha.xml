@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Configuracao">
+    tools:context=".EsqueceuSenha">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,31 +15,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/buttonNbr"
+            <EditText
+                android:id="@+id/emailResetSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="NBR" />
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/logout"
+                android:id="@+id/emailEnviarResetSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="logout" />
+                android:text="Enviar e-mail" />
 
             <Button
-                android:id="@+id/deletar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Deletar" />
-
-            <Button
-                android:id="@+id/voltar"
+                android:id="@+id/voltarTelaLoginResetSenha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Voltar" />
-
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

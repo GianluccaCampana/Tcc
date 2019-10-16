@@ -7,12 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class TelaPrincipal extends AppCompatActivity {
 
     private Button tomadas;
     private Button luminaria;
     private Button configuracao;
 
+    private FirebaseAuth aut;
+    private FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,15 @@ public class TelaPrincipal extends AppCompatActivity {
         luminaria = (Button) findViewById(R.id.buttonCalLum);
         configuracao = (Button) findViewById(R.id.buttonConfig);
 
+        acessarTelas();
+
+
+    }
+
+
+
+    ///////MÉTODOS///////////////////
+    private void acessarTelas() {
         tomadas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,4 +62,6 @@ public class TelaPrincipal extends AppCompatActivity {
             }
         });
     }
+
+
 }

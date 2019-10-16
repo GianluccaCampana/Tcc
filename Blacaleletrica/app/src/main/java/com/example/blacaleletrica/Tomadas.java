@@ -29,7 +29,13 @@ public class Tomadas extends AppCompatActivity {
         cal=(Button)findViewById(R.id.buttonResulTom);
         grupo=(RadioGroup)findViewById(R.id.opcoes);
 
+        calculo();
 
+
+
+    }
+
+    private void calculo() {
 
         cal.setOnClickListener(new View.OnClickListener() {
             @Override
