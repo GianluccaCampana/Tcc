@@ -5,12 +5,10 @@ import androidx.annotation.NonNull;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import java.lang.reflect.Field;
-
 public abstract class ConexaoBD {
     private  static FirebaseAuth firebaseAuth ;
     private  static  FirebaseAuth.AuthStateListener authStateListener;
-    private static FirebaseUser usuario;
+    private static FirebaseUser firebaseUser;
 
 
     private ConexaoBD(){
@@ -33,9 +31,9 @@ public abstract class ConexaoBD {
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();// regatando dados e verificando se tem algum usuário cadastrado
+                FirebaseUser user = firebaseAuth.getInstance().getCurrentUser();// regatando dados e verificando se tem algum usuário cadastrado
                 if(user != null){
-                    usuario = user;
+                    firebaseUser = user;
                 }
             }
         };
@@ -43,31 +41,13 @@ public abstract class ConexaoBD {
     }
     public static FirebaseUser getFirebaseUser(){
         // usuário logado
-        return  usuario;
+        return firebaseUser;
     }
 
     public static void saida(){
         // fazer logout
-       firebaseAuth.signOut();
+       firebaseAuth.getInstance().signOut();
     }
 
-    public static void setFirebaseAuth(FirebaseAuth firebaseAuth) {
-        ConexaoBD.firebaseAuth = firebaseAuth;
-    }
 
-    public static FirebaseAuth.AuthStateListener getAuthStateListener() {
-        return authStateListener;
-    }
-
-    public static void setAuthStateListener(FirebaseAuth.AuthStateListener authStateListener) {
-        ConexaoBD.authStateListener = authStateListener;
-    }
-
-    public static FirebaseUser getUsuario() {
-        return usuario;
-    }
-
-    public static void setUsuario(FirebaseUser usuario) {
-        ConexaoBD.usuario = usuario;
-    }
 }

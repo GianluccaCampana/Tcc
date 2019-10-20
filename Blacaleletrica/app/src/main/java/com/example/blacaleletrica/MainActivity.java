@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText emailLogin, senhaLogin;
     private Button btnLogin, btnCadastro, btnEsqueceuSenha;
     private FirebaseAuth aut;
+    private  FirebaseUser user;
 
 
     @Override
@@ -93,9 +94,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         aut = ConexaoBD.getFirebaseAuth();
+        //user = ConexaoBD.getFirebaseUser();
+        verificaUser(); // método para manter logado após o fechamento
+
     }
 
-/////////////////////////// MÉTODO LOGIN /////////////////////
+
+    private void verificaUser() {
+        // Lógica confore documentação do firebase
+        FirebaseUser user = aut.getInstance().getCurrentUser();
+
+        if(user != null){
+            Intent i = new Intent(MainActivity.this, TelaPrincipal.class);
+            startActivity(i);
+        }else{
+            msg("necessario cadastro ou login");
+
+        }
+    }
+
+    /////////////////////////// MÉTODO LOGIN /////////////////////
     private void login(String email, String senha) {
 
         aut.signInWithEmailAndPassword(email, senha)
@@ -108,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                                 msg("Login com sucesso");
                                 Intent intent = new Intent(MainActivity.this, TelaPrincipal.class);
                                 startActivity(intent);
+                                finish();
 
                         }else{
                             msg("Login Incorreto");

@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Cadastro extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class Cadastro extends AppCompatActivity {
     private Button buttonCadastro;
     private  Button voltarLogin;
     private FirebaseAuth aut;
+    private FirebaseUser user;
+
 
 
     @Override
@@ -93,6 +96,7 @@ public class Cadastro extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         aut = ConexaoBD.getFirebaseAuth();
+        user = ConexaoBD.getFirebaseUser();
     }
 
     private void mensagem(String msg){

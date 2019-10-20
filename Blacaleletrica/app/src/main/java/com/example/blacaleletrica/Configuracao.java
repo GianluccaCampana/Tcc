@@ -45,6 +45,7 @@ public class Configuracao extends AppCompatActivity {
                  msg("Logout com sucesso");
                  Intent i = new Intent(Configuracao.this, MainActivity.class);
                  startActivity(i);
+
             }
 
 
