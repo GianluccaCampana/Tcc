@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         emailLogin=(EditText)findViewById(R.id.emailLogin);
         senhaLogin=(EditText)findViewById(R.id.senhaLogin);
-        btnCadastro = (Button)findViewById(R.id.cadastrar);
-        btnLogin = (Button) findViewById(R.id.buttonLogin);
+        btnCadastro = (Button)findViewById(R.id.btnCadastrar);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
         btnEsqueceuSenha=(Button)findViewById(R.id.resetSenha);
 
            acessoTelas();
