@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class Cadastro extends AppCompatActivity {
 
@@ -23,8 +22,8 @@ public class Cadastro extends AppCompatActivity {
     private EditText senhaCadastro;
     private Button buttonCadastro;
     private  Button voltarLogin;
-    private FirebaseAuth aut;
-    private FirebaseUser user;
+    private FirebaseAuth cadUser = FirebaseAuth.getInstance();
+
 
 
 
@@ -63,7 +62,7 @@ public class Cadastro extends AppCompatActivity {
             }
 
             private void criarUsuario( String email, String senha) {
-                aut.createUserWithEmailAndPassword(email, senha)
+                cadUser.createUserWithEmailAndPassword(email, senha)
 
                         //saber se o cadastro foi concluído com sucesso pelo task
                         .addOnCompleteListener(Cadastro.this, new OnCompleteListener<AuthResult>() {
@@ -92,12 +91,7 @@ public class Cadastro extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        aut = ConexaoBD.getFirebaseAuth();
-        user = ConexaoBD.getFirebaseUser();
-    }
+
 
     private void mensagem(String msg){
         Toast.makeText(Cadastro.this,msg,Toast.LENGTH_SHORT).show();

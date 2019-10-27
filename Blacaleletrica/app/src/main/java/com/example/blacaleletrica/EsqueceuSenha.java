@@ -78,9 +78,4 @@ public class EsqueceuSenha extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        aut = ConexaoBD.getFirebaseAuth();
-    }
-}
+   }

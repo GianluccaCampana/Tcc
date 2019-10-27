@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class DeletarConta extends AppCompatActivity {
     private Button del, vol;
     private EditText emailDel;
-    private FirebaseAuth aut;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +68,5 @@ public class DeletarConta extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        aut = ConexaoBD.getFirebaseAuth();
-    }
+
 }

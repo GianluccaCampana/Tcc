@@ -8,10 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Configuracao extends AppCompatActivity {
 
     private Button nbr, logout , voltar, del;
-
+    private FirebaseAuth userLlogout  = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +43,7 @@ public class Configuracao extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 ConexaoBD.saida();
+                 userLlogout.signOut();
                  msg("Logout com sucesso");
                  Intent i = new Intent(Configuracao.this, MainActivity.class);
                  startActivity(i);

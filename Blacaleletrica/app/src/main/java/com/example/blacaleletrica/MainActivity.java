@@ -3,13 +3,12 @@ package com.example.blacaleletrica;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,8 +20,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     private EditText emailLogin, senhaLogin;
-    private Button btnLogin, btnCadastro, btnEsqueceuSenha;
-    private FirebaseAuth aut;
+    private Button btnLogin, btnCadastro;
+    private TextView  textEsqueceuSenha;
+    private FirebaseAuth userLogin = FirebaseAuth.getInstance();
     private  FirebaseUser user;
 
 
@@ -35,9 +35,11 @@ public class MainActivity extends AppCompatActivity {
         senhaLogin=(EditText)findViewById(R.id.senhaLogin);
         btnCadastro = (Button)findViewById(R.id.btnCadastrar);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnEsqueceuSenha=(Button)findViewById(R.id.resetSenha);
+        textEsqueceuSenha =(TextView) findViewById(R.id.resetSenha);
 
            acessoTelas();
+
+           verificaUser(); // Método para manter usuário logado
 
 
     }
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         /////////////////// ir para tela esqueceu senha //////////////////////////////
-        btnEsqueceuSenha.setOnClickListener(new View.OnClickListener() {
+        textEsqueceuSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, EsqueceuSenha.class);
@@ -90,19 +92,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        aut = ConexaoBD.getFirebaseAuth();
-        //user = ConexaoBD.getFirebaseUser();
-        verificaUser(); // método para manter logado após o fechamento
-
-    }
-
-
-    private void verificaUser() {
+    ///// Manter logado
+private void verificaUser() {
         // Lógica confore documentação do firebase
-        FirebaseUser user = aut.getInstance().getCurrentUser();
+        FirebaseUser user = userLogin.getInstance().getCurrentUser();
 
         if(user != null){
             Intent i = new Intent(MainActivity.this, TelaPrincipal.class);
@@ -116,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
     /////////////////////////// MÉTODO LOGIN /////////////////////
     private void login(String email, String senha) {
 
-        aut.signInWithEmailAndPassword(email, senha)
+        userLogin.signInWithEmailAndPassword(email, senha)
 
 
                 .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
