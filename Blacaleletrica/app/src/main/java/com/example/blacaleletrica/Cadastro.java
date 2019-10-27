@@ -32,8 +32,8 @@ public class Cadastro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-        voltarLogin = (Button)findViewById(R.id.voltarLogin);
-        buttonCadastro = (Button)findViewById(R.id.buttonCadastro);
+        voltarLogin = (Button)findViewById(R.id.btnVoltar);
+        buttonCadastro = (Button)findViewById(R.id.btnCadastro);
         emailCadastro = (EditText)findViewById(R.id.emailCadastro);
         senhaCadastro = (EditText)findViewById(R.id.senhaCadastro);
 
