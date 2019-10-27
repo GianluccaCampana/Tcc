@@ -24,8 +24,8 @@ public class EsqueceuSenha extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esqueceu_senha);
-        btnVoltar=(Button)findViewById(R.id.voltarTelaLoginResetSenha);
-        btnReset=(Button)findViewById(R.id.emailEnviarResetSenha);
+        btnVoltar=(Button)findViewById(R.id.btnTelaLoginResetSenha);
+        btnReset=(Button)findViewById(R.id.btnEnviarResetSenha);
         emailReset=(EditText) findViewById(R.id.emailResetSenha);
 
         funcaoBotoes();

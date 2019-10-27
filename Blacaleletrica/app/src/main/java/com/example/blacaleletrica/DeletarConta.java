@@ -25,7 +25,7 @@ public class DeletarConta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deletar_conta);
 
-        del = (Button)findViewById(R.id.deleteConta);
+        del = (Button)findViewById(R.id.btndeleteConta);
         emailDel= (EditText)findViewById(R.id.emailDelete);
 
         deletar();

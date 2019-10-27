@@ -17,10 +17,10 @@ public class Configuracao extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracao);
-        nbr = (Button)findViewById(R.id.buttonNbr);
-        logout = (Button)findViewById(R.id.logout);
-        voltar = (Button)findViewById(R.id.voltar);
-        del = (Button)findViewById(R.id.deletar);
+        nbr = (Button)findViewById(R.id.btnNbr);
+        logout = (Button)findViewById(R.id.btnlogout);
+        voltar = (Button)findViewById(R.id.btnvoltar);
+        del = (Button)findViewById(R.id.btnDelete);
 
 
         eventoBotoes();

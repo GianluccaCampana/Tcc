@@ -24,9 +24,9 @@ public class TelaPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_principal);
 
-        tomadas = (Button) findViewById(R.id.buttonCalTom);
-        luminaria = (Button) findViewById(R.id.buttonCalLum);
-        configuracao = (Button) findViewById(R.id.buttonConfig);
+        tomadas = (Button) findViewById(R.id.btnCalTom);
+        luminaria = (Button) findViewById(R.id.btnCalIlumi);
+        configuracao = (Button) findViewById(R.id.btnConfig);
 
         acessarTelas();
 

@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".Configuracao">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-70dp"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="CONFIGURAÇÕES"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/btnNbr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="145dp"
+        android:text="NBR"
+        android:theme="@style/botaoInicial" />
 
-            <Button
-                android:id="@+id/buttonNbr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NBR" />
+    <Button
+        android:id="@+id/btnlogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="logout"
+        android:theme="@style/botaoInicial" />
 
-            <Button
-                android:id="@+id/logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="logout" />
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Deletar"
+        android:theme="@style/botaoInicial" />
 
-            <Button
-                android:id="@+id/deletar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Deletar" />
+    <Button
+        android:id="@+id/btnvoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Voltar"
+        android:theme="@style/botaoInicial" />
 
-            <Button
-                android:id="@+id/voltar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Voltar" />
-
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
