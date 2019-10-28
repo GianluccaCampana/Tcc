@@ -11,16 +11,16 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="209dp"
         android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        app:srcCompat="@drawable/inicio" />
+        android:layout_marginTop="130dp"
+        app:srcCompat="@drawable/inicio3" />
 
     <EditText
         android:id="@+id/emailLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/bg_edit_text"
         android:drawableLeft="@drawable/ic_email_cinza_24dp"
         android:drawablePadding="10dp"
