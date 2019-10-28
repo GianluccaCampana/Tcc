@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class DeletarConta extends AppCompatActivity {
     private Button del, vol;
     private EditText emailDel;
+    private EditText senhaDel;
 
 
     @Override
@@ -27,6 +28,7 @@ public class DeletarConta extends AppCompatActivity {
 
         del = (Button)findViewById(R.id.btndeleteConta);
         emailDel= (EditText)findViewById(R.id.emailDelete);
+        senhaDel = (EditText)findViewById(R.id.senhaDelete);
 
         deletar();
 
