@@ -71,7 +71,7 @@ public class Cadastro extends AppCompatActivity {
                                 if(task.isSuccessful()){
                                     //cadastro com sucesso irá aparecer uma e mensagem e será jodado para tela principal
                                     mensagem("Cadastro com sucesso");
-                                    Intent intent = new Intent(Cadastro.this, TelaPrincipal.class);
+                                    Intent intent = new Intent(Cadastro.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }else{
