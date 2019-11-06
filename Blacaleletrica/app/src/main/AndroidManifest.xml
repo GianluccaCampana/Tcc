@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.blacaleletrica" >
+    package="com.example.blacaleletrica"
+
+   >
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,15 +15,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".DeletarConta"></activity>
-        <activity android:name=".EsqueceuSenha" />
-        <activity android:name=".Cadastro" />
-        <activity android:name=".Nbr" />
-        <activity android:name=".Configuracao" />
-        <activity android:name=".Luminaria" />
-        <activity android:name=".Tomadas" />
-        <activity android:name=".TelaPrincipal" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".DeletarConta"
+            android:parentActivityName=".activity.DeletarConta"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".EsqueceuSenha"
+            android:parentActivityName=".EsqueceuSenha"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Cadastro"
+            android:parentActivityName=".Cadastro"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Nbr"
+            android:parentActivityName=".Nbr"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Configuracao"
+            android:parentActivityName=".Configuracao"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Luminaria"
+            android:parentActivityName=".Luminaria"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Tomadas"
+            android:parentActivityName=".Tomadas"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TelaPrincipal"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

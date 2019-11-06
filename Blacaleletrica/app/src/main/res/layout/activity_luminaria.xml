@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +11,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_250sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-100dp"
         android:gravity="center"
         android:padding="20dp"
         android:text="cálculo Luminotécnico"
@@ -22,13 +21,21 @@
         android:textColorLink="#00000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:autoSizeTextType="none" />
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
+        android:id="@+id/linearLayout4"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <TextView
             android:id="@+id/comprimento"
@@ -55,16 +62,21 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal">
+        android:id="@+id/linearLayout6"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
 
         <TextView
             android:id="@+id/largura"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_weight="1"
             android:padding="11dp"
             android:text="Largura :"
@@ -86,12 +98,11 @@
 
     <RadioGroup
         android:id="@+id/Ambientes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_120sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextComprimentoLum">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <RadioButton
             android:id="@+id/radioButtonSala"
@@ -128,7 +139,6 @@
         android:id="@+id/buttonCalcularLum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:text="Calcular"
         android:theme="@style/botaoInicial"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,16 +147,21 @@
         app:layout_constraintTop_toBottomOf="@+id/Ambientes" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum">
 
         <TextView
             android:id="@+id/quantidade"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_weight="1"
             android:padding="11dp"
             android:text="Quantidade :"
@@ -169,4 +184,4 @@
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

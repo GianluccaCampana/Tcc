@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Tomadas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
     android:gravity="center"
-    android:orientation="vertical"
     tools:context=".Tomadas">
 
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_250sdp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-120dp"
         android:gravity="center"
         android:padding="20dp"
         android:text="cálculo de tomadas"
@@ -24,74 +21,76 @@
         android:textColorLink="#00000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:autoSizeTextType="none" />
+        app:autoSizeTextType="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <TextView
-            android:id="@+id/comprimento"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10dp"
-            android:text="Comprimento :"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextComprimentoTom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextComprimentoTom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comprimento"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <TextView
-            android:id="@+id/largura"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="11dp"
-            android:text="Largura :"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/editTextLarguraTom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="textPersonName" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLarguraTom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Largura"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 
 
     <RadioGroup
         android:id="@+id/opcoes"
-        android:layout_width="match_parent"
-        android:layout_height="153dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_100sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+
 
         <RadioButton
             android:id="@+id/radioButton1"
@@ -117,8 +116,8 @@
 
     <Button
         android:id="@+id/buttonResulTom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="-25dp"
         android:text="Calcular"
         android:theme="@style/botaoInicial"
@@ -128,15 +127,23 @@
         app:layout_constraintTop_toBottomOf="@+id/opcoes" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="@dimen/_315sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonResulTom">
 
         <TextView
             android:id="@+id/quantidade"
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_weight="1"
             android:padding="11dp"
             android:text="Quantidade :"
@@ -149,15 +156,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:focusable="false"
             android:ems="10"
+            android:focusable="false"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonResulTom" />
 
+
     </LinearLayout>
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
