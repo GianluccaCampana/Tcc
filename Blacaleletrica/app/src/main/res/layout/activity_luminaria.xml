@@ -30,79 +30,66 @@
         android:id="@+id/linearLayout4"
         android:layout_width="@dimen/_315sdp"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <TextView
-            android:id="@+id/comprimento"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="Comprimento :"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/editTextComprimentoLum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextLargLum" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextComprimentoLum"
+                android:layout_width="346dp"
+                android:layout_height="wrap_content"
+                android:hint="Comprimento"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
     <LinearLayout
-        android:id="@+id/linearLayout6"
+        android:id="@+id/linearLayout"
         android:layout_width="@dimen/_315sdp"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="370dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-        <TextView
-            android:id="@+id/largura"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_50sdp"
-            android:layout_weight="1"
-            android:padding="11dp"
-            android:text="Largura :"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/editTextLargLum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLargLum"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:hint="Largura"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <RadioGroup
         android:id="@+id/Ambientes"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_120sdp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <RadioButton
             android:id="@+id/radioButtonSala"
@@ -137,8 +124,9 @@
 
     <Button
         android:id="@+id/buttonCalcularLum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="10dp"
         android:text="Calcular"
         android:theme="@style/botaoInicial"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,41 +135,38 @@
         app:layout_constraintTop_toBottomOf="@+id/Ambientes" />
 
     <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="@dimen/_315sdp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum">
 
+
         <TextView
             android:id="@+id/quantidade"
-            android:layout_width="@dimen/_200sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="49dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="11dp"
-            android:text="Quantidade :"
+            android:text="Quantidades :"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editTextResulLum"
-            android:layout_width="wrap_content"
+            android:layout_width="153dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="numberDecimal"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonCalcularLum" />
-
+            android:focusable="false"
+            android:inputType="textPersonName" />
     </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

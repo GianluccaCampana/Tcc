@@ -86,8 +86,10 @@
 
     <RadioGroup
         android:id="@+id/opcoes"
-        android:layout_width="@dimen/_300sdp"
+        android:layout_width="0dp"
         android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
