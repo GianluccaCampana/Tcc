@@ -12,14 +12,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Configuracao extends AppCompatActivity {
 
-    private Button nbr, logout , voltar, del;
+    private Button upload, logout , del;
     private FirebaseAuth userLlogout  = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracao);
-        nbr = (Button)findViewById(R.id.btnUpload);
+        upload = (Button)findViewById(R.id.btnUpload);
         logout = (Button)findViewById(R.id.btnlogout);
         del = (Button)findViewById(R.id.btnDelete);
 
@@ -30,7 +30,7 @@ public class Configuracao extends AppCompatActivity {
     }
 ////////////////// acessar a NBR ////////////////////////////////////
     private void eventoBotoes() {
-        nbr.setOnClickListener(new View.OnClickListener() {
+        upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent nbr5410 = new Intent(Configuracao.this, Nbr.class);
@@ -61,14 +61,6 @@ public class Configuracao extends AppCompatActivity {
             }
         });
 
-        //////////////////// Voltar tela principal /////////////////////
-        voltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent vol = new Intent(Configuracao.this, TelaPrincipal.class);
-                startActivity(vol);
-            }
-        });
     }
     ////////////// Método toast
 

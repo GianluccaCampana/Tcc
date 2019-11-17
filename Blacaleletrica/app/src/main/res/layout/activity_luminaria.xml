@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="@dimen/_250sdp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="20dp"
@@ -148,7 +148,7 @@
 
         <TextView
             android:id="@+id/quantidade"
-            android:layout_width="49dp"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="11dp"

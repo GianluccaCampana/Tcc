@@ -48,7 +48,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Enviar e-mail" />
+            android:text="Enviar e-mail"
+            android:theme="@style/botaoInicial"/>
 
         <Button
             android:id="@+id/btnTelaLoginResetSenha"
@@ -58,7 +59,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="10dp"
-            android:text="Voltar" />
+            android:text="Voltar"
+            android:theme="@style/botaoInicial"/>
     </LinearLayout>
 
 </LinearLayout>

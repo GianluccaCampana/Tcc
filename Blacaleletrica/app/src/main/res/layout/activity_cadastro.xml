@@ -60,7 +60,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-130dp"
             android:layout_weight="1"
-            android:text="Cadastrar" />
+            android:text="Cadastrar"
+            android:theme="@style/botaoInicial"/>
 
         <Button
             android:id="@+id/btnVoltar"
@@ -68,7 +69,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-130dp"
             android:layout_weight="1"
-            android:text="Voltar" />
+            android:text="Voltar"
+            android:theme="@style/botaoInicial"/>
     </LinearLayout>
 
 </LinearLayout>
