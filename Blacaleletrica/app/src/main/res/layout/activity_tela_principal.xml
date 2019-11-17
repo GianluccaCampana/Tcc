@@ -31,7 +31,7 @@
         <Button
             android:id="@+id/btnCalTom"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_50sdp"
             android:layout_above="@+id/btnCalIlumi"
             android:text="Cálculo de tomadas"
             android:theme="@style/botaoInicial" />
@@ -39,10 +39,10 @@
         <Button
             android:id="@+id/btnCalIlumi"
             android:layout_width="347dp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_50sdp"
             android:layout_above="@+id/btnConfig"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="5dp"
             android:text="Cálculos Luminotécnico"
             android:theme="@style/botaoInicial" />
@@ -50,9 +50,9 @@
         <Button
             android:id="@+id/btnConfig"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_50sdp"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="50dp"
             android:text="Configurações"
             android:theme="@style/botaoInicial" />
 

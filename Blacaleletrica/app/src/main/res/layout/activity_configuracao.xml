@@ -22,35 +22,30 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnNbr"
+        android:id="@+id/btnUpload"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginTop="145dp"
-        android:text="NBR"
-        android:theme="@style/botaoInicial" />
-
-    <Button
-        android:id="@+id/btnlogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="logout"
+        android:text="upload pdf"
         android:theme="@style/botaoInicial" />
 
     <Button
         android:id="@+id/btnDelete"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="30dp"
         android:text="Deletar"
         android:theme="@style/botaoInicial" />
 
     <Button
-        android:id="@+id/btnvoltar"
+        android:id="@+id/btnlogout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Voltar"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="30dp"
+        android:text="logout"
         android:theme="@style/botaoInicial" />
+
+
+
 
 </LinearLayout>
