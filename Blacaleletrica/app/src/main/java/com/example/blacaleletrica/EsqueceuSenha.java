@@ -28,6 +28,8 @@ public class EsqueceuSenha extends AppCompatActivity {
         btnReset=(Button)findViewById(R.id.btnEnviarResetSenha);
         emailReset=(EditText) findViewById(R.id.emailResetSenha);
 
+        aut = FirebaseAuth.getInstance();
+
         funcaoBotoes();
     }
 

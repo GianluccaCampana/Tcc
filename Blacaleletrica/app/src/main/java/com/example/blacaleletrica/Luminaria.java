@@ -64,7 +64,7 @@ public class Luminaria extends AppCompatActivity {
                         double calc = (num1Lum * num2Lum) * 150;
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(calc)));
+                        resul.setText(String.valueOf(Math.round(calc + "lx")));
                     }
                 }else if(ambL == R.id.radioButtonCozinha){
 
@@ -81,7 +81,7 @@ public class Luminaria extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(calc)));
+                        resul.setText(String.valueOf(Math.round(calc + "lx")));
                     }
                 }else if(ambL == R.id.radioButtonQuarto){
 
@@ -112,7 +112,7 @@ public class Luminaria extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(calc)));
+                        resul.setText(String.valueOf(Math.round(calc + "lx")));
                     }
                 }else if(ambL == R.id.radioButtonGeral){
                     if(larLum.getText().toString().trim().equals("")|| compLum.getText().toString().trim().equals("")){
@@ -129,7 +129,7 @@ public class Luminaria extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(calc)));
+                        resul.setText(String.valueOf(Math.round(calc + "lx")));
                     }
                 }else if(larLum.getText().toString().trim().equals("")|| compLum.getText().toString().trim().equals("")){
                     Context alerta= getApplicationContext();
