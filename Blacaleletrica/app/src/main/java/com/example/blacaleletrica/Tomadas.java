@@ -68,7 +68,7 @@ public class Tomadas extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(total + "un.")));
+                        resul.setText(String.valueOf(Math.round(total )+ " un."));
                     }
                 }else if(op == R.id.radioButton2){
                     if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
@@ -87,7 +87,7 @@ public class Tomadas extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(total + "un.")));
+                        resul.setText(String.valueOf(Math.round(total )+ " un."));
                     }
                 }else if(op == R.id.radioButton3){
                     if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
@@ -103,7 +103,7 @@ public class Tomadas extends AppCompatActivity {
 
                         // mostrar o resultado o resultado no editText resultado
                         // Math.round arredonda o resulta pra cima
-                        resul.setText(String.valueOf(Math.round(total + "un.")));
+                        resul.setText(String.valueOf(Math.round(total )+ " un."));
                     }
                 }else if(compTom.getText().toString().trim().equals("")|| larTom.getText().toString().trim().equals("")){
 
